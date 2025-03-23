@@ -15,5 +15,5 @@
 *.out
 ./code/mitm/switch
 ./code/mitm/switch.o
-./phaseworks
-./phaseworks/*
+./phase_works
+./phase_works/*
