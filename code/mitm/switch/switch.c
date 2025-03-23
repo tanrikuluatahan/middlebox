@@ -238,7 +238,7 @@ void handle_packet_from_nats(natsConnection *nc, natsSubscription *sub, natsMsg 
     char * outiface;
     if (strcmp(natsMsg_GetSubject(msg), "outpktsec") == 0) {
         memcpy(eth->h_dest, mac_secure_net_host, 6);
-        //memcpy(eth->h_source, mac_ethsec, 6);
+        //memcpy(eth->h_source, mac_insecure_net_host, 6);
 
         outiface = ethsec;
         if (sendto(sock_raw_ethsec, buffer, size, MSG_DONTROUTE, NULL, 0) < 0) {
@@ -246,7 +246,7 @@ void handle_packet_from_nats(natsConnection *nc, natsSubscription *sub, natsMsg 
         }
     } else if (strcmp(natsMsg_GetSubject(msg), "outpktinsec") == 0) {
         memcpy(eth->h_dest, mac_insecure_net_host, 6);
-        //memcpy(eth->h_source, mac_ethinsec, 6);
+        //memcpy(eth->h_source, mac_secure_net_host, 6);
         outiface = ethinsec;
         if (sendto(sock_raw_ethinsec, buffer, size, MSG_DONTROUTE, NULL, 0) < 0) {
             perror("Sendto error for ethinsec");

@@ -1,0 +1,17 @@
+PING insec (10.0.0.21) 56(84) bytes of data.
+64 bytes from insec (10.0.0.21): icmp_seq=1 ttl=64 time=6.16 ms
+64 bytes from insec (10.0.0.21): icmp_seq=2 ttl=64 time=5.83 ms
+64 bytes from insec (10.0.0.21): icmp_seq=3 ttl=64 time=7.73 ms
+
+--- insec ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 5.827/6.573/7.730/0.829 ms
+------------------------------------------------------------
+Client connecting to insec, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 11215.21 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  1] local 10.1.0.21 port 41933 connected with 10.0.0.21 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-10.0153 sec  1.25 MBytes  1.05 Mbits/sec
+[  1] Sent 896 datagrams

@@ -7,7 +7,7 @@ echo 'Printing environment'
 echo "Route net is ${SECURE_NET}"
 echo "Route gateway is ${SECURENET_GATEWAY}"
 
-sysctl net.ipv4.ip_forward=0
+sysctl -w net.ipv4.ip_forward=0
 sysctl -p
 
 # This following pings adds the MAC addresses to the ARP table
