@@ -23,6 +23,7 @@ services:
     privileged: true
     cap_add:
     - NET_ADMIN
+    - NET_RAW
   mitm:
     build: ./dockers/mitm
     init: true
@@ -117,6 +118,7 @@ services:
     privileged: true
     cap_add:
     - NET_ADMIN
+    - NET_RAW
 
 
   nats:
