@@ -1,0 +1,7 @@
+Run: 6
+Out-of-order packets: 3
+Missing packets: 16711897
+EOF received: yes
+Interarrival mean: 843548.90 µs
+Interarrival stddev: 783324.38 µs
+SNR: 1.08

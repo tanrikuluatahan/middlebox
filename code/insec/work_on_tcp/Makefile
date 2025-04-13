@@ -7,7 +7,7 @@ CC = cc
 RM = rm
 
 CFLAGS = -g -I/usr/include
-LIBS = 
+LIBS = -lm
 LDFLAGS = 
 
 
