@@ -1,0 +1,5 @@
+TThhiiss  iiss  aa  ttoopp  sseeccrreett  mmeessaaggee  bbeeiinngg  ttrrannssmmiitttteedd  vviia TTCCPPwwiinnddooww  ssizzee  ccoovveerrt  cc—aannnneell.
+
+TThhee  rreecceeiivveerr  sshhoouulldd bee  aabblee  ttoo  ddeeccoddee  tthhiiss  mmessssaaggee  wiitthhououtt  aannyyoonnee  ddetteeccttiinngg  thhee  ccoovveertt ccoommmuuiiccaattiioonn..
+
+TTessttiinngg--22--33......  TTrraannssfferr  ccoommppleette!  

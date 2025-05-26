@@ -1,0 +1,3 @@
+This is atop secret mese being transmitted viaTCP window size covert channel.
+The receiver should be able t decode this message without nyone detecting the covert communication.
+Testin 1-2-3... Transfer complete! 

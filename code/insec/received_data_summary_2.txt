@@ -1,0 +1,8 @@
+Run: 2
+Encoding mode: ascii
+Window base: 1000
+Out-of-order packets: 0
+Missing packets: 0
+Duplicate packets detected: 0
+Total bytes received: 0
+EOF received: yes

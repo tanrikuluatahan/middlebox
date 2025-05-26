@@ -1,0 +1,11 @@
+Run: 1
+Encoding mode: ascii
+Window base: 1000
+Out-of-order packets: 3
+Missing packets: 4294901906
+Duplicate packets detected: 194
+Total bytes received: 228
+EOF received: yes
+Interarrival mean: 485932.96 µs
+Interarrival stddev: 455733.14 µs
+SNR: 1.07
