@@ -1,0 +1,20 @@
+=== COVERT CHANNEL SESSION 20250526_190843 ===
+Encoding mode: ascii
+Window base: 1000
+Host IP: 10.0.0.21:8888
+==================================================
+
+--- TRANSMISSION 1 ---
+Timestamp: 2025-05-26 19:12:53
+File saved: received_file_1.bin
+Bytes received: 222
+Out-of-order packets: 0
+Missing packets: 0
+Duplicate packets: 3922
+Errors corrected: 1960
+Reliability: 100.00% (4146/4146)
+EOF received: yes
+Interarrival mean: 1095900.48 µs
+Interarrival stddev: 250231.10 µs
+SNR: 4.38
+

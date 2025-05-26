@@ -1,4 +1,0 @@
-TThh–iss  iiss  aa  ttoopp  sseeccrrett  mmeessge  bbeeiinngg  ttrraannmmiitttteedd  vviiaa CCPP  wwiinnddooww  ssiiše  ccooeerrtt  cchhaannnneell..
-TThhee  rreeceeiivverrshhoouulldd bbeeaabbllee  ttoo  ddeeccodee  tthhiiss  meessssagee  wwitthoouu  aannyyoonnee  ddeeeeccttiinng  tthhee  ccoovveerrttccoommmmuunniiccaattioion..
-
-TTeessttiinn  11-22--33......  TTrraannssfeerr  ccoommppeettee!!  

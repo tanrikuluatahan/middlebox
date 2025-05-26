@@ -1,0 +1,283 @@
+Listening for TCP packets on 10.0.0.21:8888...
+Decoding mode: ascii, Window base: 1000
+[!] Error processing packet (seq: 2000, window: 84): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2000 (ack_num=2001)
+[!] Error processing packet (seq: 2000, window: 84): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2000 (ack_num=2001)
+[!] Error processing packet (seq: 2000, window: 84): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2000 (ack_num=2001)
+[!] Error processing packet (seq: 2000, window: 84): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2000 (ack_num=2001)
+[!] Error processing packet (seq: 2001, window: 104): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2001 (ack_num=2002)
+[!] Error processing packet (seq: 2001, window: 104): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2001 (ack_num=2002)
+[!] Error processing packet (seq: 2001, window: 104): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2001 (ack_num=2002)
+[!] Error processing packet (seq: 2001, window: 104): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2001 (ack_num=2002)
+[!] Error processing packet (seq: 2002, window: 105): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2002 (ack_num=2003)
+[!] Error processing packet (seq: 2002, window: 105): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2002 (ack_num=2003)
+[!] Error processing packet (seq: 2002, window: 105): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2002 (ack_num=2003)
+[!] Error processing packet (seq: 2002, window: 105): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2002 (ack_num=2003)
+[!] Error processing packet (seq: 2003, window: 115): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2003 (ack_num=2004)
+[!] Error processing packet (seq: 2003, window: 115): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2003 (ack_num=2004)
+[!] Error processing packet (seq: 2003, window: 115): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2003 (ack_num=2004)
+[!] Error processing packet (seq: 2003, window: 115): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2003 (ack_num=2004)
+[!] Error processing packet (seq: 2004, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2004 (ack_num=2005)
+[!] Error processing packet (seq: 2004, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2004 (ack_num=2005)
+[!] Error processing packet (seq: 2004, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2004 (ack_num=2005)
+[!] Error processing packet (seq: 2004, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2004 (ack_num=2005)
+[!] Error processing packet (seq: 2005, window: 105): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2005 (ack_num=2006)
+[!] Error processing packet (seq: 2005, window: 105): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2005 (ack_num=2006)
+[!] Error processing packet (seq: 2005, window: 105): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2005 (ack_num=2006)
+[!] Error processing packet (seq: 2005, window: 105): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2005 (ack_num=2006)
+[!] Error processing packet (seq: 2006, window: 115): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2006 (ack_num=2007)
+[!] Error processing packet (seq: 2006, window: 115): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2006 (ack_num=2007)
+[!] Error processing packet (seq: 2006, window: 115): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2006 (ack_num=2007)
+[!] Error processing packet (seq: 2006, window: 115): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2006 (ack_num=2007)
+[!] Error processing packet (seq: 2006, window: 115): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2006 (ack_num=2007)
+[!] Error processing packet (seq: 2006, window: 115): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2006 (ack_num=2007)
+[!] Error processing packet (seq: 2006, window: 115): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2006 (ack_num=2007)
+[!] Error processing packet (seq: 2006, window: 115): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2006 (ack_num=2007)
+[!] Error processing packet (seq: 2006, window: 115): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2006 (ack_num=2007)
+[!] Error processing packet (seq: 2006, window: 115): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2006 (ack_num=2007)
+[!] Error processing packet (seq: 2006, window: 115): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2006 (ack_num=2007)
+[!] Error processing packet (seq: 2007, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2007 (ack_num=2008)
+[!] Error processing packet (seq: 2007, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2007 (ack_num=2008)
+[!] Error processing packet (seq: 2007, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2007 (ack_num=2008)
+[!] Error processing packet (seq: 2007, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2007 (ack_num=2008)
+[!] Error processing packet (seq: 2007, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2007 (ack_num=2008)
+[!] Error processing packet (seq: 2007, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2007 (ack_num=2008)
+[!] Error processing packet (seq: 2007, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2007 (ack_num=2008)
+[!] Error processing packet (seq: 2007, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2007 (ack_num=2008)
+[!] Error processing packet (seq: 2007, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2007 (ack_num=2008)
+[!] Error processing packet (seq: 2007, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2007 (ack_num=2008)
+[!] Error processing packet (seq: 2007, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2007 (ack_num=2008)
+[!] Error processing packet (seq: 2007, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2007 (ack_num=2008)
+[!] Error processing packet (seq: 2007, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2007 (ack_num=2008)
+[!] Error processing packet (seq: 2007, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2007 (ack_num=2008)
+[!] Error processing packet (seq: 2007, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2007 (ack_num=2008)
+[!] Error processing packet (seq: 2008, window: 97): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2008 (ack_num=2009)
+[!] Error processing packet (seq: 2008, window: 97): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2008 (ack_num=2009)
+[!] Error processing packet (seq: 2008, window: 97): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2008 (ack_num=2009)
+[!] Error processing packet (seq: 2008, window: 97): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2008 (ack_num=2009)
+[!] Error processing packet (seq: 2008, window: 97): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2008 (ack_num=2009)
+[!] Error processing packet (seq: 2008, window: 97): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2008 (ack_num=2009)
+[!] Error processing packet (seq: 2008, window: 97): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2008 (ack_num=2009)
+[!] Error processing packet (seq: 2008, window: 97): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2008 (ack_num=2009)
+[!] Error processing packet (seq: 2008, window: 97): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2008 (ack_num=2009)
+[!] Error processing packet (seq: 2008, window: 97): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2008 (ack_num=2009)
+[!] Error processing packet (seq: 2008, window: 97): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2008 (ack_num=2009)
+[!] Error processing packet (seq: 2008, window: 97): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2008 (ack_num=2009)
+[!] Error processing packet (seq: 2009, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2009 (ack_num=2010)
+[!] Error processing packet (seq: 2009, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2009 (ack_num=2010)
+[!] Error processing packet (seq: 2009, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2009 (ack_num=2010)
+[!] Error processing packet (seq: 2009, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2009 (ack_num=2010)
+[!] Error processing packet (seq: 2009, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2009 (ack_num=2010)
+[!] Error processing packet (seq: 2009, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2009 (ack_num=2010)
+[!] Error processing packet (seq: 2009, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2009 (ack_num=2010)
+[!] Error processing packet (seq: 2009, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2009 (ack_num=2010)
+[!] Error processing packet (seq: 2009, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2009 (ack_num=2010)
+[!] Error processing packet (seq: 2010, window: 116): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2010 (ack_num=2011)
+[!] Error processing packet (seq: 2010, window: 116): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2010 (ack_num=2011)
+[!] Error processing packet (seq: 2010, window: 116): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2010 (ack_num=2011)
+[!] Error processing packet (seq: 2009, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2009 (ack_num=2010)
+[!] Error processing packet (seq: 2009, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2009 (ack_num=2010)
+[!] Error processing packet (seq: 2010, window: 116): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2010 (ack_num=2011)
+[!] Error processing packet (seq: 2010, window: 116): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2010 (ack_num=2011)
+[!] Error processing packet (seq: 2010, window: 116): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2010 (ack_num=2011)
+[!] Error processing packet (seq: 2010, window: 116): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2010 (ack_num=2011)
+[!] Error processing packet (seq: 2010, window: 116): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2010 (ack_num=2011)
+[!] Error processing packet (seq: 2010, window: 116): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2010 (ack_num=2011)
+[!] Error processing packet (seq: 2011, window: 111): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2011 (ack_num=2012)
+[!] Error processing packet (seq: 2011, window: 111): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2011 (ack_num=2012)
+[!] Error processing packet (seq: 2011, window: 111): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2011 (ack_num=2012)
+[!] Error processing packet (seq: 2009, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2009 (ack_num=2010)
+[!] Error processing packet (seq: 2009, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2009 (ack_num=2010)
+[!] Error processing packet (seq: 2009, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2009 (ack_num=2010)
+[!] Error processing packet (seq: 2009, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2009 (ack_num=2010)
+[!] Error processing packet (seq: 2011, window: 111): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2011 (ack_num=2012)
+[!] Error processing packet (seq: 2011, window: 111): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2011 (ack_num=2012)
+[!] Error processing packet (seq: 2011, window: 111): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2011 (ack_num=2012)
+[!] Error processing packet (seq: 2011, window: 111): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2011 (ack_num=2012)
+[!] Error processing packet (seq: 2011, window: 111): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2011 (ack_num=2012)
+[!] Error processing packet (seq: 2011, window: 111): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2011 (ack_num=2012)
+[!] Error processing packet (seq: 2010, window: 116): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2010 (ack_num=2011)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2010, window: 116): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2010 (ack_num=2011)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2010, window: 116): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2010 (ack_num=2011)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2011, window: 111): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2011 (ack_num=2012)
+[!] Error processing packet (seq: 2011, window: 111): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2011 (ack_num=2012)
+[!] Error processing packet (seq: 2011, window: 111): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2011 (ack_num=2012)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2012, window: 112): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2012 (ack_num=2013)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2013, window: 32): cannot access local variable 'seq' where it is not associated with a value
+[<] Sent ACK for seq 2013 (ack_num=2014)
+[!] Error processing packet (seq: 2014, window: 115): cannot access local variable 'seq' where it is not associated with a value
