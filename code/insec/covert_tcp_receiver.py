@@ -735,7 +735,7 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
             
             # Check if this is EOF marker
             if secret == 0x04 and not eof_received and not is_corrupted:  # EOF marker
-                print(f"[✔] Processing buffered EOF marker - seq {expected_seq}")
+                print(f"[OK] Processing buffered EOF marker - seq {expected_seq}")
                 eof_received = True
                 eof_timeout = packet_time + 10.0
                 # Don't process the EOF here - let the main logic handle it
@@ -1004,7 +1004,7 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
             # Check if this looks like the final handshake ACK
             if sequence == expected_seq and acknowledgement > 0:
                 print(f"[HANDSHAKE] Step 3/3: Received final ACK (seq={sequence}, ack={acknowledgement})")
-                print(f"[HANDSHAKE] ✅ TCP handshake completed! Ready for data transmission")
+                print(f"[HANDSHAKE] [OK] TCP handshake completed! Ready for data transmission")
                 # Don't process this as data, just acknowledge the handshake completion
                 continue
         
@@ -1291,7 +1291,7 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
                     
                     # Handle EOF marker
                     if secret == 0x04 and not eof_received and not is_likely_corrupted:  # EOF marker - only if not corrupted
-                        print(f"[✔] Received EOF marker - seq {seq}")
+                        print(f"[OK] Received EOF marker - seq {seq}")
                         eof_received = True
                         eof_timeout = current_time + 10.0  # Ignore packets for next 10 seconds (increased from 5)
                         
@@ -1341,7 +1341,7 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
                         # Clear any remaining buffer entries
                         packet_buffer.clear()
                         
-                        print(f"[✔] All buffered packets processed, completing transmission...")
+                        print(f"[OK] All buffered packets processed, completing transmission...")
                         
                         # Process the complete message (no file writing)
                         # Verify if this is a checksum-protected transmission
@@ -1359,7 +1359,7 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
                                     calculated_digest = hashlib.md5(message_data).digest()[:checksum_size]
                                     
                                     if received_digest == calculated_digest:
-                                        print(f"[✔] Checksum verification passed (using {checksum_size} bytes)")
+                                        print(f"[OK] Checksum verification passed (using {checksum_size} bytes)")
                                         covert_buffer = message_data  # Remove checksum from data
                                         valid_checksum = True
                                         break
@@ -1367,11 +1367,11 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
                                     print(f"[!] Error verifying checksum: {e}")
                         
                         if not valid_checksum and len(covert_buffer) >= 4:
-                            print(f"[✘] Checksum verification failed!")
+                            print(f"[FAIL] Checksum verification failed!")
                         
                         # Post-processing: Fix common errors in text
                         
-                        print(f"[✔] Transmission complete ({len(covert_buffer)} bytes received)")
+                        print(f"[OK] Transmission complete ({len(covert_buffer)} bytes received)")
                         print(f"[i] Deduplicated {duplicate_count} packets during reception")
                         print(f"[i] Corrected {error_corrected} errors during reception")
                         
@@ -1381,7 +1381,7 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
                         
                         # Display received covert content
                         print(f"\n{'='*60}")
-                        print(f"🔴 COVERT DATA (Hidden in TCP Window Sizes)")
+                        print(f"# COVERT DATA (Hidden in TCP Window Sizes)")
                         print(f"{'='*60}")
                         try:
                             text_content = covert_buffer.decode('utf-8', errors='replace')
@@ -1416,7 +1416,7 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
                         
                         # Display received cover traffic
                         print(f"\n{'='*60}")
-                        print(f"🟢 COVER TRAFFIC (Legitimate TCP Payload Data)")
+                        print(f"$ COVER TRAFFIC (Legitimate TCP Payload Data)")
                         print(f"{'='*60}")
                         if len(cover_traffic_buffer) > 0:
                             try:
@@ -1468,7 +1468,7 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
                                 covert_filename = f"received_covert_run_{run_number}.txt"
                             with open(covert_filename, 'wb') as f:
                                 f.write(covert_buffer)
-                            print(f"\n[✔] Saved covert data to {covert_filename}")
+                            print(f"\n[OK] Saved covert data to {covert_filename}")
                             
                             # Save cover traffic  
                             if len(cover_traffic_buffer) > 0:
@@ -1478,7 +1478,7 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
                                     cover_filename = f"received_cover_run_{run_number}.txt"
                                 with open(cover_filename, 'wb') as f:
                                     f.write(cover_traffic_buffer)
-                                print(f"[✔] Saved cover traffic to {cover_filename}")
+                                print(f"[OK] Saved cover traffic to {cover_filename}")
                             
                             # Also save readable versions
                             try:
@@ -1496,7 +1496,7 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
                                 
                                 with open(covert_readable_filename, 'w', encoding='utf-8') as f:
                                     f.write(readable_covert)
-                                print(f"[✔] Saved readable covert text to {covert_readable_filename}")
+                                print(f"[OK] Saved readable covert text to {covert_readable_filename}")
                                 
                                 # Readable cover text
                                 if len(cover_traffic_buffer) > 0:
@@ -1513,7 +1513,7 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
                                     
                                     with open(cover_readable_filename, 'w', encoding='utf-8') as f:
                                         f.write(readable_cover)
-                                    print(f"[✔] Saved readable cover text to {cover_readable_filename}")
+                                    print(f"[OK] Saved readable cover text to {cover_readable_filename}")
                                 
                             except Exception as e:
                                 print(f"[!] Error saving readable versions: {e}")
@@ -1539,12 +1539,12 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
                             print(f"[i] Interarrival stddev: {std:.2f} µs")
                             print(f"[i] SNR: {snr:.2f}")
                         
-                        print(f"[✔] Transmission complete. Exiting receiver...")
+                        print(f"[OK] Transmission complete. Exiting receiver...")
                         
                         # Clean up and exit gracefully
                         recv_sock.close()
                         send_sock.close()
-                        print(f"[✔] TCP Covert Channel Receiver shutdown complete.")
+                        print(f"[OK] TCP Covert Channel Receiver shutdown complete.")
                         
                         # === WRITE CSV LOG ===
                         # Save CSV log to file
@@ -1554,12 +1554,12 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
                                     writer = csv.DictWriter(csvfile, fieldnames=csv_headers)
                                     writer.writeheader()
                                     writer.writerows(csv_log)
-                                    print(f"[✔] Saved CSV log with {len(csv_log)} entries to {logfile_name}")
+                                    print(f"[OK] Saved CSV log with {len(csv_log)} entries to {logfile_name}")
                                 else:
                                     # Write empty CSV with headers
                                     writer = csv.DictWriter(csvfile, fieldnames=csv_headers)
                                     writer.writeheader()
-                                    print(f"[✔] Saved empty CSV log to {logfile_name}")
+                                    print(f"[OK] Saved empty CSV log to {logfile_name}")
                         except Exception as e:
                             print(f"[!] Error writing CSV log: {e}")
                         
@@ -1576,12 +1576,12 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
                         # After processing in-order packet, check for buffered packets
                         if process_buffered_packets():
                             # EOF was found in buffered packets - trigger transmission completion
-                            print(f"[✔] EOF found in buffered packets during regular processing, transmission complete. Exiting receiver...")
+                            print(f"[OK] EOF found in buffered packets during regular processing, transmission complete. Exiting receiver...")
                             
                             # Clean up and exit gracefully
                             recv_sock.close()
                             send_sock.close()
-                            print(f"[✔] TCP Covert Channel Receiver shutdown complete.")
+                            print(f"[OK] TCP Covert Channel Receiver shutdown complete.")
                             
                             # === WRITE CSV LOG ===
                             # Save CSV log to file
@@ -1591,12 +1591,12 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
                                         writer = csv.DictWriter(csvfile, fieldnames=csv_headers)
                                         writer.writeheader()
                                         writer.writerows(csv_log)
-                                        print(f"[✔] Saved CSV log with {len(csv_log)} entries to {logfile_name}")
+                                        print(f"[OK] Saved CSV log with {len(csv_log)} entries to {logfile_name}")
                                     else:
                                         # Write empty CSV with headers
                                         writer = csv.DictWriter(csvfile, fieldnames=csv_headers)
                                         writer.writeheader()
-                                        print(f"[✔] Saved empty CSV log to {logfile_name}")
+                                        print(f"[OK] Saved empty CSV log to {logfile_name}")
                             except Exception as e:
                                 print(f"[!] Error writing CSV log: {e}")
                             
@@ -1630,12 +1630,12 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
                         # After processing in-order packet, check for buffered packets
                         if process_buffered_packets():
                             # EOF was found in buffered packets - trigger transmission completion
-                            print(f"[✔] EOF found in buffered packets during regular processing, transmission complete. Exiting receiver...")
+                            print(f"[OK] EOF found in buffered packets during regular processing, transmission complete. Exiting receiver...")
                             
                             # Clean up and exit gracefully
                             recv_sock.close()
                             send_sock.close()
-                            print(f"[✔] TCP Covert Channel Receiver shutdown complete.")
+                            print(f"[OK] TCP Covert Channel Receiver shutdown complete.")
                             
                             # === WRITE CSV LOG ===
                             # Save CSV log to file
@@ -1645,12 +1645,12 @@ def receive_covert_data(mode='ascii', window_base=1000, port=PORT,
                                         writer = csv.DictWriter(csvfile, fieldnames=csv_headers)
                                         writer.writeheader()
                                         writer.writerows(csv_log)
-                                        print(f"[✔] Saved CSV log with {len(csv_log)} entries to {logfile_name}")
+                                        print(f"[OK] Saved CSV log with {len(csv_log)} entries to {logfile_name}")
                                     else:
                                         # Write empty CSV with headers
                                         writer = csv.DictWriter(csvfile, fieldnames=csv_headers)
                                         writer.writeheader()
-                                        print(f"[✔] Saved empty CSV log to {logfile_name}")
+                                        print(f"[OK] Saved empty CSV log to {logfile_name}")
                             except Exception as e:
                                 print(f"[!] Error writing CSV log: {e}")
                             

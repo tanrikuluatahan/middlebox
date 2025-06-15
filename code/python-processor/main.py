@@ -1403,7 +1403,7 @@ class CovertChannelDetector:
     def _print_alert(self, packet_info, detection_results, overall_score):
         """Print alert information to console"""
         print("\n" + "="*80)
-        print("🚨 COVERT CHANNEL ALERT DETECTED! 🚨")
+        print("!!! COVERT CHANNEL ALERT DETECTED! !!!")
         print("="*80)
         print(f"Timestamp: {datetime.fromtimestamp(packet_info['timestamp'])}")
         print(f"Flow: {packet_info['src_ip']}:{packet_info['src_port']} -> {packet_info['dst_ip']}:{packet_info['dst_port']}")
@@ -1417,7 +1417,7 @@ class CovertChannelDetector:
         elif window_covert == 4:
             print(f"Potential EOF Marker: {window_covert}")
         
-        print("\n📊 DETAILED DETECTION ANALYSIS (with weighted scoring):")
+        print("\n DETAILED DETECTION ANALYSIS (with weighted scoring):")
         print("-" * 50)
         
         # Define the same weights as in the scoring calculation
@@ -1517,16 +1517,16 @@ class CovertChannelDetector:
                     explanation = details['low']
                     icon = "🟢"
                 
-                weight_indicator = "⭐⭐⭐" if weight >= 3.0 else "⭐⭐" if weight >= 2.0 else "⭐" if weight >= 1.0 else "○"
+                weight_indicator = "+++" if weight >= 3.0 else "++" if weight >= 2.0 else "+" if weight >= 1.0 else "○"
                 print(f"{icon} {details['name']:20} | Score: {score:.3f} (×{weight:.1f}) = {weighted_score:.3f} {weight_indicator} ({level})")
                 if explanation:
                     print(f"   └─ {explanation}")
         
-        print(f"\n⚖️  WEIGHTED TOTAL SCORE: {overall_score:.3f} (capped at 1.0)")
-        print("   ⭐⭐⭐ = High weight (3.0x) | ⭐⭐ = Medium weight (2.0x) | ⭐ = Normal weight (1.0x) | ○ = Low weight (0.8x)")
+        print(f"\n  WEIGHTED TOTAL SCORE: {overall_score:.3f} (capped at 1.0)")
+        print("   +++ = High weight (3.0x) | ++ = Medium weight (2.0x) | + = Normal weight (1.0x) | ○ = Low weight (0.8x)")
         
         # Provide overall assessment
-        print(f"\n🎯 OVERALL ASSESSMENT:")
+        print(f"\n OVERALL ASSESSMENT:")
         if overall_score >= 0.8:
             print("   VERY HIGH CONFIDENCE - Strong indicators of covert channel activity")
         elif overall_score >= 0.6:
@@ -1540,7 +1540,7 @@ class CovertChannelDetector:
         flow_id = packet_info['flow_id']
         if flow_id in self.tcp_flows:
             flow_stats = self.tcp_flows[flow_id]
-            print(f"\n📈 FLOW STATISTICS:")
+            print(f"\n FLOW STATISTICS:")
             print(f"   Packets in flow: {flow_stats['packet_count']}")
             print(f"   Flow duration: {time.time() - flow_stats['start_time']:.1f} seconds")
             if len(flow_stats['window_history']) > 1:
@@ -1760,7 +1760,7 @@ async def run(corruption_rate, detection_enabled, detection_threshold, verbose_d
                 if verbose_detection:
                     # Show detailed detection breakdown for all TCP packets
                     print(f"\n[DETECTION] {direction} | Window: {window_size} (Base: {window_base}, Covert: {window_covert})")
-                    print(f"[TOTAL SCORE] {detection_score:.3f} | Alert: {'🚨 YES' if alert_triggered else '✅ NO'}")
+                    print(f"[TOTAL SCORE] {detection_score:.3f} | Alert: {'!!! YES' if alert_triggered else ' NO'}")
                     
                     # Show individual method scores with interpretation and weights
                     print("[METHOD SCORES] (with weights)")
@@ -1796,7 +1796,7 @@ async def run(corruption_rate, detection_enabled, detection_threshold, verbose_d
                         weight = method_weights.get(method, 1.0)
                         weighted_score = score * weight
                         status = "🔴" if score > 0.6 else "🟡" if score > 0.3 else "🟢"
-                        weight_indicator = "⭐⭐⭐" if weight >= 3.0 else "⭐⭐" if weight >= 2.0 else "⭐" if weight >= 1.0 else "○"
+                        weight_indicator = "+++" if weight >= 3.0 else "++" if weight >= 2.0 else "+" if weight >= 1.0 else "○"
                         print(f"  {status} {explanation:25}: {score:.3f} (×{weight:.1f}) = {weighted_score:.3f} {weight_indicator}")
                     
                     print(f"[WEIGHTED TOTAL] Final score: {detection_score:.3f} (capped at 1.0)")
@@ -1857,7 +1857,7 @@ async def run(corruption_rate, detection_enabled, detection_threshold, verbose_d
                     if mitigation_enabled and mitigation_actions['triggered']:
                         action_str = mitigation_actions['primary_action']
                         forward_str = "DROPPED" if not should_forward else "FORWARDED"
-                        mitigation_info = f" | 🛡️ {action_str.upper()} ({forward_str})"
+                        mitigation_info = f" |  {action_str.upper()} ({forward_str})"
                     print(f"[PACKET] {tcp_info}{mitigation_info}")
             elif not verbose_detection:
                 # Show basic info for non-TCP packets
@@ -1871,7 +1871,7 @@ async def run(corruption_rate, detection_enabled, detection_threshold, verbose_d
             # Apply delay if mitigation requested it
             if mitigation_actions.get('delay_ms', 0) > 0:
                 delay_seconds = mitigation_actions['delay_ms'] / 1000.0
-                print(f"[MITIGATOR] 🕒 Applying {mitigation_actions['delay_ms']}ms delay")
+                print(f"[MITIGATOR]  Applying {mitigation_actions['delay_ms']}ms delay")
                 await asyncio.sleep(delay_seconds)
             
             # Forward packet to destination (only if not dropped by mitigation)
@@ -1879,7 +1879,7 @@ async def run(corruption_rate, detection_enabled, detection_threshold, verbose_d
                 out_topic = "outpktinsec" if subject == "inpktsec" else "outpktsec"
                 await nc.publish(out_topic, bytes(corrupted))
             else:
-                print(f"[MITIGATOR] 🚫 Packet DROPPED - not forwarded")
+                print(f"[MITIGATOR]  Packet DROPPED - not forwarded")
             
         except Exception:
             traceback.print_exc()  # ⬅️ Native Python traceback
@@ -1890,20 +1890,20 @@ async def run(corruption_rate, detection_enabled, detection_threshold, verbose_d
 
     print(f"Subscribed to inpktsec and inpktinsec topics with corruption rate: {corruption_rate}")
     if detection_enabled:
-        print(f"🕵️ Covert Channel Detection ENABLED (threshold: {detection_threshold})")
-        print(f"📊 Detection verbosity: {'DETAILED' if verbose_detection else 'SUMMARY'}")
-        print(f"⚖️  Weighted Scoring: ASCII 3-digit pattern (3.5x), ASCII encoding (3.0x), XOR encoding (2.5x)")
+        print(f" Covert Channel Detection ENABLED (threshold: {detection_threshold})")
+        print(f" Detection verbosity: {'DETAILED' if verbose_detection else 'SUMMARY'}")
+        print(f"  Weighted Scoring: ASCII 3-digit pattern (3.5x), ASCII encoding (3.0x), XOR encoding (2.5x)")
         print(f"   Other methods: Window legitimacy (2.0x), Entropy (1.5x), Payload correlation (1.2x), Others (1.0x), Timing (0.8x)")
     else:
-        print("🔇 Covert Channel Detection DISABLED")
+        print(" Covert Channel Detection DISABLED")
     
     if mitigation_enabled:
-        print(f"🛡️  Covert Channel Mitigation ENABLED (threshold: {mitigation_threshold})")
-        print(f"🎯 Mitigation strategies: {', '.join(mitigation_strategies)}")
-        print(f"⚡ Aggressiveness level: {mitigation_aggressiveness.upper()}")
-        print(f"📋 Log file: {mitigator.log_file}")
+        print(f"  Covert Channel Mitigation ENABLED (threshold: {mitigation_threshold})")
+        print(f" Mitigation strategies: {', '.join(mitigation_strategies)}")
+        print(f" Aggressiveness level: {mitigation_aggressiveness.upper()}")
+        print(f" Log file: {mitigator.log_file}")
     else:
-        print("🔇 Covert Channel Mitigation DISABLED")
+        print(" Covert Channel Mitigation DISABLED")
 
     try:
         # Periodic statistics reporting
@@ -2143,7 +2143,7 @@ class CovertChannelMitigator:
         flow_id = packet_info.get('flow_id', '')
         flow_already_reset = flow_id in self.reset_flows
         
-        print(f"[MITIGATOR] 🛡️  MITIGATION TRIGGERED | Score: {detection_score:.3f} | Flow: {flow_id}")
+        print(f"[MITIGATOR]   MITIGATION TRIGGERED | Score: {detection_score:.3f} | Flow: {flow_id}")
         
         # Apply mitigation strategies in order
         for strategy_name in self.strategies:
@@ -2192,7 +2192,7 @@ class CovertChannelMitigator:
                         if action_result.get('notes'):
                             mitigation_actions['notes'].extend(action_result['notes'])
                         
-                        print(f"[MITIGATOR]   ✅ Applied {strategy_name}: {action_result.get('action', 'modified')}")
+                        print(f"[MITIGATOR]    Applied {strategy_name}: {action_result.get('action', 'modified')}")
                     
                 except Exception as e:
                     print(f"[MITIGATOR] Error applying strategy {strategy_name}: {e}")
@@ -2205,7 +2205,7 @@ class CovertChannelMitigator:
         if mitigation_actions['strategies_applied']:
             actions_str = ', '.join(mitigation_actions['strategies_applied'])
             result_str = "DROPPED" if not should_forward else f"MODIFIED ({mitigation_actions['primary_action']})"
-            print(f"[MITIGATOR] 🎯 Result: {result_str} | Strategies: {actions_str}")
+            print(f"[MITIGATOR]  Result: {result_str} | Strategies: {actions_str}")
         
         return mitigated_packet, mitigation_actions, should_forward
     

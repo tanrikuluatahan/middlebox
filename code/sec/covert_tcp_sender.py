@@ -310,7 +310,7 @@ def send_covert_data(message, dest_ip, src_ip, delay_seconds=0.5, repeat=1, logf
                         seq_num=seq_num,
                         ack_num=server_seq,  # ACK the server's sequence number
                         flags=0x18,  # PSH+ACK flags (pushing data)
-                        window_size=encoded_window,  # 🔴 COVERT DATA IN WINDOW SIZE! 🔴
+                        window_size=encoded_window,  # # COVERT DATA IN WINDOW SIZE! #
                         payload=packet_payload
                     )
                     
@@ -420,21 +420,21 @@ def send_covert_data(message, dest_ip, src_ip, delay_seconds=0.5, repeat=1, logf
                                         
                                         if received_ack == expected_ack:
                                             # Perfect match - receiver got this exact packet
-                                            print(f"[✓] Received ACK for seq {seq_num} (received ack={received_ack})")
+                                            print(f"[OK] Received ACK for seq {seq_num} (received ack={received_ack})")
                                             # Update congestion window on successful ACK
                                             cwnd_simulator.update_on_ack(i)
                                             ack_received = True
                                             break
                                         elif received_ack >= expected_ack and received_ack <= expected_ack + 2:
                                             # Small forward ACK - acceptable (reduced tolerance from 15 to 2)
-                                            print(f"[✓] Received forward ACK for seq {seq_num} (ack={received_ack}, expected={expected_ack})")
+                                            print(f"[OK] Received forward ACK for seq {seq_num} (ack={received_ack}, expected={expected_ack})")
                                             # Update congestion window on successful ACK
                                             cwnd_simulator.update_on_ack(i)
                                             ack_received = True
                                             break
                                         elif abs(received_ack - expected_ack) <= 2:
                                             # Close match, might be corrupted but reasonable (reduced tolerance from 10 to 2)
-                                            print(f"[✓] Received approximate ACK for seq {seq_num} (ack={received_ack}, expected={expected_ack})")
+                                            print(f"[OK] Received approximate ACK for seq {seq_num} (ack={received_ack}, expected={expected_ack})")
                                             # Update congestion window on successful ACK
                                             cwnd_simulator.update_on_ack(i)
                                             ack_received = True
@@ -534,7 +534,7 @@ def send_covert_data(message, dest_ip, src_ip, delay_seconds=0.5, repeat=1, logf
                                             
                                             if (received_ack == expected_ack or 
                                                 abs(received_ack - expected_ack) <= 2):
-                                                print(f"[✓] Final attempt successful! Received ACK for seq {seq_num} (ack={received_ack})")
+                                                print(f"[OK] Final attempt successful! Received ACK for seq {seq_num} (ack={received_ack})")
                                                 # Update congestion window on successful final ACK
                                                 cwnd_simulator.update_on_ack(i)
                                                 ack_received = True
@@ -548,7 +548,7 @@ def send_covert_data(message, dest_ip, src_ip, delay_seconds=0.5, repeat=1, logf
                                     continue
                             
                             if not ack_received:
-                                print(f"[✗] Final attempt failed for seq {seq_num}, giving up...")
+                                print(f"[FAIL] Final attempt failed for seq {seq_num}, giving up...")
                             
                             # Wait longer before giving up completely in corrupted environment
                             time.sleep(0.5)
@@ -621,11 +621,11 @@ def send_covert_data(message, dest_ip, src_ip, delay_seconds=0.5, repeat=1, logf
             duration = (end_usec - run_start_usec) / 1000000.0
             throughput = len(covert_message) / duration
             
-            print(f"[✔] Run {r} complete: {duration:.2f} seconds, {throughput:.2f} bytes/sec")
+            print(f"[OK] Run {r} complete: {duration:.2f} seconds, {throughput:.2f} bytes/sec")
     
     send_sock.close()
     recv_sock.close()
-    print("[✔] Transmission complete.")
+    print("[OK] Transmission complete.")
 
 def main():
     if len(sys.argv) < 2:
@@ -898,7 +898,7 @@ def perform_tcp_handshake(send_sock, recv_sock, src_ip, dest_ip, src_port):
             continue
     
     if server_seq_num is None:
-        print(f"[HANDSHAKE] ❌ Timeout waiting for SYN-ACK")
+        print(f"[HANDSHAKE]  Timeout waiting for SYN-ACK")
         return None, None, None
     
     # Step 3: Send final ACK to complete handshake
@@ -919,7 +919,7 @@ def perform_tcp_handshake(send_sock, recv_sock, src_ip, dest_ip, src_port):
     # Send final ACK
     send_sock.sendto(ack_packet, (dest_ip, 0))
     
-    print(f"[HANDSHAKE] ✅ TCP handshake completed successfully!")
+    print(f"[HANDSHAKE]  TCP handshake completed successfully!")
     print(f"[HANDSHAKE] Client ISN: {initial_seq_num}, Server ISN: {server_seq_num}")
     print(f"[HANDSHAKE] XOR Key will be derived from initial seq: {initial_seq_num}")
     
